@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Info about HTML</title>
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(to bottom right, rgb(0,0,0), rgb(0,0,255));
+		}
+		h1{
+			font-family: gigi;
+			text-align: center;
+			font-size: 50px;
+			background-color: white;
+		}
+		p{
+			font-size: 20px;
+			font-family: blackadder itc;
+			text-align: center;
+			font-weight: bold;
+		}
+		.side_nav{
+			height: 100%;
+			width: 0px;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			overflow-x: hidden;
+			padding-top: 60px;
+		}
+		.side_nav a{
+			padding: 6px 6px 6px 32px;
+			text-decoration: none;
+			font-size: 39px;
+			color: grey;
+			display: block;
+			transition-duration: 0.3s;
+			font-family: edwardian script itc;
+		}
+		.side_nav a:hover{
+			color: white;
+		}
+		.side_nav .close{
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 42px;
+			margin-left: 50px;
+		}
+		.open_nav{
+			color: white;
+		}
+		#body{
+			transition: margin-left 0.5s;
+		}
+		@media screen and (max-height: 500px){
+			.side_nav{
+				padding-top: 15px;
+			}
+			.side_nav a{
+				font-size: 10px;
+				font-family: algerian;
+				text-decoration-color: white;
+			}
+		}
+			p{
+				background-image: linear-gradient(white,green);
+			}
+
+	.mySlides{
+		display: none;
+	}
+	img{
+		vertical-align: middle;
+		padding-left: 23px;
+	}
+	.slideshow-container{
+		max-width: 1500px;
+		position: relative;
+	}
+	.leftArrow, .rightArrow{
+		position: absolute;
+		top: 50%;
+		padding: 16px;
+		margin-top: -22px;
+	}
+	.rightArrow{
+		right: 0;
+		width: 100px;
+		height: 100px;
+	}
+	.leftArrow{
+		width: 100px;
+		height: 100px;
+	}
+	.text{
+		color: black;
+		font-size: 45px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+		font-weight: bolder;
+	}
+	.numbertext{
+		color: red;
+		font-size: 50px;
+		padding: 8px 12px;
+		position: absolute;
+		right: 50%;
+	}
+	.dot{
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0px 2px;
+		background-color: grey;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s;
+	}
+	.dot:hover, .active{
+		background-color: darkgrey;
+	}
+	.fade{
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+	@keyframes fade{
+		from{opacity: 0.4;}
+		to{opacity: 1;}
+	}
+	</style>
+</head>
+<body>
+<div id="sidenav" class="side_nav">
+		<a href="javascript:void(0)" class="close" onclick="closeNav()">
+		&times;
+		</a>
+		<a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Wikipedia</a> <br>
+		<a href="https://www.w3schools.com/html/" target="_blank"> Tutorial</a> <br>
+		<a href="https://www.wikihow.com/Create-a-Simple-Web-Page-with-HTML" target="_blank">Building a webpage</a> <br>
+	</div>
+	<div class="main" id="body">
+		<span onclick="openNav()" class="open_nav">&#9776;</span>
+		<div><h1>HTML</h1></div>
+		<p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.<br>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.<br>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page.<br> HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.<br> Tags such as and  directly introduce content into the page. Other tags such as surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.<br>HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.</p>
+	</div>
+	<script type="text/javascript">
+		function openNav()
+		{
+		document.getElementById('sidenav').style.width = "100%";
+		document.getElementById('body').style.marginLeft = "250px";
+		document.getElementById('sidenav').style.backgroundColor = "rgba(0,0,0,0.9)"
+		}
+		function closeNav()
+		{
+		document.getElementById('sidenav').style.width = "0px";
+		document.getElementById('body').style.marginLeft = "0px";
+		}
+	</script>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+		<div class="numbertext">1 / 2</div>
+		<img src="https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg" style="width: 100%; height: 800px;">
+		<div class="text"> Html coding(Sublime Text) </div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 2</div>
+		<img src="https://repository-images.githubusercontent.com/134285701/635de980-586d-11ea-9220-1a3211239c30" style="width: 100%;">
+		<div class="text" style="color: darkblue"> Html </div>
+	</div>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6v3_zZHuenf7i-1Rd_nRn5ASRdBIcKiekrA&usqp=CAU" class="leftArrow" onclick="addSlides(-1)">
+	<img src="https://www.nicepng.com/png/detail/119-1193390_arrow-signs-png-images-right-arrow-img.png" class="rightArrow" onclick="addSlides(1)">
+	</div>
+	<br>
+	<div style="text-align: center;">
+		<span class="dot" onclick="current(1)"></span>
+		<span class="dot" onclick="current(2)"></span>
+	</div>
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex)
+		function addSlides(n)
+		{
+			showSlides(slideIndex += n)
+		}
+		function current(n)
+		{
+			showSlides(slideIndex = n)
+		}
+		function showSlides(n)
+		{
+			var i;
+			var slides = document.getElementsByClassName('mySlides');
+			var dots = document.getElementsByClassName('dot');
+			if (n> slides.length) 
+			{
+				slideIndex = 1;
+			}
+			if (n<1) 
+			{
+				slideIndex = slides.length;
+			}
+			for(i = 0; i< slides.length; i++)
+			{
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i< dots.length; i++)
+			{
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
+</body>
+</html>
